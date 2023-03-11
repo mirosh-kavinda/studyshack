@@ -15,13 +15,24 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-secondary ">
-    &nbsp&nbsp&nbsp&nbsp <a class="navbar-brand" href="../../index.php">
-      <i class="fa fa-arrow-circle-left"></i>&nbspBack
-    </a>
-  </nav>
+  <!-- Breadcrumbs & Search -->
+  <div class="container-fluid  ">
+    <div class="card mb-4 wow fadeIn grey lighten-4">
+      <div class="card-body d-sm-flex justify-content-between">
+        <h4 class="mb-1 mb-sm-0 ">
+          <a href="../../index.php">Home</a>
+          <span>/</span>
+          <span>Register</span>
+        </h4>
 
-  <div class="card-body p-md-5 text-black">
+
+      </div>
+    </div>
+  </div>
+  <!-- /.Breadcrumbs & Search -->
+
+
+  <div class="card-body mx-5 text-black">
 
     <h3 class="mb-1 text-uppercase">Join With Us</h3>
     <!-- Tabs navs -->

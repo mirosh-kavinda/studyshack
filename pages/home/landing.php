@@ -8,8 +8,11 @@
             <h2 class="display-3 font-weight-bold mb-2">StudyShack Institute</h2>
             <hr class="hr-light">
             <h3 class="subtext-header mt-4 mb-5">Empowering young minds to explore the world of technology.</h3>
-            <a href="pages/Register/registerSection.php" data-offset="100" class="btn btn-info wow fadeInLeft" data-wow-delay="0.2s">Register</a>
-            <a href="#classes" data-offset="100" class="btn btn-warning wow fadeInRight" data-wow-delay="0.2s">Classes</a>
+
+            <a href="pages/Register/registerSection.php" data-offset="100" class="btn btn-info wow fadeInLeft registerbtn" data-wow-delay="0.2s">Register</a>
+            <a href="#classes" data-offset="100" class="btn btn-warning wow " data-wow-delay="0.2s">Classes</a>
+
+
           </div>
         </div>
       </div>

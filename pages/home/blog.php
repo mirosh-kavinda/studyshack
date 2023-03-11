@@ -1,7 +1,10 @@
-<h2 class="text-center mb-5 my-5 pt-4 pb-4 font-weight-bold"> Top courses</h2>
+<div class="row">
+  <h2 class="col-8 font-weight-bold">Populer Learning Programmes </h2>
+  <a href="pages/learningProgramme.php" class="col-4"  style="float:right">View More</a>
+</div>
 
 <!--Grid row-->
-<div class="row mb-5 pb-3">
+<div class="row mb-5 p-5 pb-3">
 
   <!--Grid column-->
   <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">

@@ -1,59 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-  <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
-</head>
+  <?php
+  include("../../utils/db_connect.php");
 
-<body>
+  $query = $conn->prepare("SELECT * FROM study_material ORDER BY m_id ASC");
+  $query->execute();
+  $result = $query->get_result();
+  if ($_SESSION['user_type'] == 2) {
+    echo '<style>#edit_btn{display:block !important;}</style>';
+  } else {
+    echo '<style>#signout{display:none !important;}</style>';
+  }
 
+  if (mysqli_num_rows($result) > 0) {
 
-
-  <div class="row d-flex justify-content-center align-items-center h-100 ">
-    <div class="card p-4">
+    while ($row = mysqli_fetch_array($result)) {
+  ?>
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Lecture 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title"><?php echo $row["m_topic"]; ?></h5>
+          <p class="card-text">fjasjdflsdfddads</p>
+          <div class="row ">
+            <a href="<?php echo $row["m_link"]; ?>" type="button" class=" col-3 btn btn-primary">Download</a>&nbsp&nbsp&nbsp
+            <button type="button" class="btn btn-primary col-3 " id="edit_btn" hidden="true">Edit</button>
+          </div>
 
-          <button type="button" class="btn btn-primary">Download</button>
-             <button type="button" class="btn btn-primary"hidden="true">Edit</button>
         </div>
       </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lecture 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-          <button type="button" class="btn btn-primary">Download</button>
-             <button type="button" class="btn btn-primary"hidden="true">Edit</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lecture 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-          <button type="button" class="btn btn-primary">Download</button>
-             <button type="button" class="btn btn-primary"hidden="true">Edit</button>
-        </div>
-      </div>
-
-    </div>
-
+  <?php
+    }
+  }
+  ?>
   </div>
   </div>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
-</body>
-
-</html>

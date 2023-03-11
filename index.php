@@ -1,3 +1,20 @@
+<?php
+
+include 'utils/authenticate.php';
+// this for hide undeclared error
+error_reporting(E_ALL);
+ini_set("display_errors", NULL);
+
+//This keep user loged in until they signed out
+if ($_SESSION["login_user"]) {
+  echo '<style>#signout,#dashboard{display:block !important;}</style>';
+  echo '<style>#signin,#Login-User,.registerbtn{display:none !important;}</style>';
+} else {
+  echo '<style>#signout,#dashboard{display:none !important;}</style>';
+  echo '<style>#signin,#Login-User{display:block !important;}</style>';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +30,19 @@
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
+
+
+
 </head>
 
 <body class="university-lp">
+  <!-- Error handelling alert box -->
 
   <!--Navigation & Intro-->
   <header>
 
     <!--Navbar-->
-    <?php include("pages/home/navbar.php"); ?>
+    <?php include("utils/navbar.php"); ?>
     <!--Navbar-->
 
     <!-- Intro Section -->
@@ -43,8 +64,6 @@
       <!--Section: About-->
 
       <hr>
-
-
 
       <!--Projects section v.3-->
       <section id="info" class="section mt-4 mb-5 pb-4">
@@ -96,9 +115,9 @@
     </div>
     <!-- login -->
 
-    <div class="container-fluid" id="Login-User">
-      <?php include("pages/home/loginSection.php"); ?>
-    </div>
+    <section class="container-fluid" id="Login-User">
+      <?php include("utils/login.php"); ?>
+    </section>
 
   </main>
   <!--Main content-->
@@ -106,18 +125,13 @@
   <!--Footer-->
   <footer class="page-footer text-center text-md-left mdb-color darken-3 mt-4">
 
-    <?php include("pages/home/footer.php"); ?>
+    <?php include("utils/footer.php"); ?>
 
   </footer>
-  <!--Footer-->
 
-  <!--SCRIPTS-->
 
   <!--JQuery-->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-
-  <!--Bootstrap tooltips-->
-  <script type="text/javascript" src="js/popper.min.js"></script>
 
   <!--Bootstrap core JavaScript-->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -125,39 +139,7 @@
   <!--MDB core JavaScript-->
   <script type="text/javascript" src="js/mdb.min.js"></script>
 
-
-
-  <script>
-    //Animation init
-    new WOW().init();
-
-    //Modal
-    $('#myModal').on('shown.bs.modal', function() {
-      $('#myInput').focus()
-    })
-
-    // Material Select Initialization
-    $(document).ready(function() {
-      $('.mdb-select').material_select();
-    });
-    $(document).ready(function() {
-      // Show/hide the button depending on the user's scroll position
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-          $('#scroll-top-btn').fadeIn();
-        } else {
-          $('#scroll-top-btn').fadeOut();
-        }
-      });
-      // When the button is clicked, smoothly scroll to the top of the page
-      $('#scroll-top-btn').click(function() {
-        $('html, body').animate({
-          scrollTop: 0
-        }, 800);
-        return false;
-      });
-    });
-  </script>
+  <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 

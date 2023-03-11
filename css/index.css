@@ -10,6 +10,10 @@ header,
   bottom: 0px;
   right: 20px;
   display: none;
+    background-color: #1C2A48;
+}
+.btn-prima {
+  background-color: #1C2A48 !important;
 }
 
 @media (min-width: 560px) and (max-width: 740px) {
