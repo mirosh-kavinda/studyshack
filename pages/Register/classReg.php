@@ -42,7 +42,7 @@
 
                         <div class="d-flex justify-content-end pt-3">
                             <button type="reset" class="btn btn-light btn-lg">Reset all</button>
-                            <input type="submit" name="subregister" class="btn btn-warning btn-lg ms-2" value="Submit Form" />
+                            <input type="submit" name="subregister" class="btn btn-info btn-lg ms-2" value="Submit Form" />
                         </div>
                 </form>
 

@@ -1,9 +1,9 @@
 
 <div class="card ">
 
-  <h4 class="mb-5 p-3 text-uppercase">Logged AS <?php echo $_SESSION['login_user']; ?>(Admin)</h4>
 
-  <div class="container px-1">
+
+  <div class="container  mb-5 ">
     <div class="row">
       <div class="col">
         <!-- Tabs navs -->
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="col-12">
+    <div class="col-12 mt-4 ">
       <!-- Tab content -->
       <div class="tab-content" id="v-tabs-tabContent">
         <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel" aria-labelledby="v-tabs-home-tab">

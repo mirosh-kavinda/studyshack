@@ -1,4 +1,4 @@
-<form action="../../utils/registration.php" method="post" class="mb-5 mt-5">
+<form action="../../utils/authenticate.php" method="post" class="mb-5 mt-5">
     <div class="col-md-12 mb-2">
         <div class="form-outline">
             <input type="text" id="form3Example1m" name="tname" class="form-control form-control-lg" />

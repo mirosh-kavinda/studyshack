@@ -3,8 +3,13 @@ body,
 header,
 .jarallax {
   height: 100%;
+
+
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
 #scroll-top-btn{
   position: fixed;
   bottom: 0px;
@@ -23,6 +28,8 @@ header,
   e header,
   .jarallax {
     height: 500px;
+
+
   }
 }
 
@@ -33,6 +40,8 @@ header,
   header,
   .jarallax {
     height: 500px;
+
+
   }
 }
 

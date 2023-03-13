@@ -1,4 +1,4 @@
-<form action="../../utils/registration.php" method="post" class="mb-5 mt-5">
+<form action="../../index.php" method="post" class="mb-5 mt-5">
 
     <div class="col-md-12 mb-2">
 

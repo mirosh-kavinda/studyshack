@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -15,3 +16,16 @@ function getNextIncrement($table, $db, $con)
   return $next_increment;
 }
 
+
+function getUser($conn, $sql, $email)
+{
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param("s", $email);
+  $stmt->execute();
+  $stmt_result = $stmt->get_result();
+  if ($stmt_result->num_rows > 0) {
+    return $stmt_result->fetch_assoc();
+  } else {
+    return false;
+  }
+}
