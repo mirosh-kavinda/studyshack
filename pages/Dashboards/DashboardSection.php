@@ -26,26 +26,33 @@ session_start();
           <a href="../../index.php">Home</a>
           <span>/</span>
           <span>Dashboard</span>
+          <div class="dropdown">
         </h4>
-        <h4 class="text-uppercase">Logged AS <?php echo $_SESSION['login_user']; ?></h4>
+        <a class="btn btn-info dropdown-toggle col-2" id=" dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+          <?php echo $_SESSION['login_user']; ?>
+        </a>
+        <!-- /.Breadcrumbs & Search -->
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="../../index.php?logout">SignOut</a></li>
 
+        </ul>
       </div>
     </div>
   </div>
-  <!-- /.Breadcrumbs & Search -->
+  </div>
 
 
   <?php
 
 
   switch ($_SESSION['user_type']) {
-    case 1:
+    case 'student':
       include "studentDash.php";
       break;
-    case 2:
+    case 'teacher':
       include "teacherDash.php";
       break;
-    case 3:
+    case 'staff':
       include "adminDash.php";
       break;
     default:

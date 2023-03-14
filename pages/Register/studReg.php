@@ -88,5 +88,6 @@
     <div class="d-flex justify-content-end pt-3">
         <button type="reset" class="btn btn-light btn-lg">Reset</button>
         <input type="submit" name="sregister" class="btn btn-info btn-lg ms-3" value="Submit" />
+       
     </div>
 </form>

@@ -22,41 +22,13 @@
                 <h4 class="mb-1 mb-sm-0 ">
                     <a href="../index.php">Home</a>
                     <span>/</span>
-                    <span>Register</span>
+                    <span></span>
                 </h4>
-
-
             </div>
         </div>
     </div>
 
-    <div class="col-xl-6">
-            <div class="card-body p-md-5 text-black">
-                <h3 class="mb-5 text-uppercase">Register a Class</h3>
 
-                <form action="../../utils/registration.php" method="post">
-                        <div class="col-md-12 mb-2">
-                            <div class="form-outline">
-                                <input disabled type="text" id="form3Example1m" name="subName" class="form-control form-control-lg" />
-                                <label class="form-label" for="form3Example1m"></label>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mb-2">
-                            <div class="form-outline">
-                                <input type="text" id="form3Example1m" name="subDesc" class="form-control form-control-lg" />
-                                <label class="form-label" for="form3Example1m">Subject Descrition</label>
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-end pt-3">
-                            <button type="reset" class="btn btn-light btn-lg">Reset all</button>
-                            <input type="submit" name="subregister" class="btn btn-info btn-lg ms-2" value="Submit Form" />
-                        </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
 
 
 

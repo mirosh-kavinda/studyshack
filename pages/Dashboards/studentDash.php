@@ -1,7 +1,5 @@
 <div class="card ">
 
-  <h4 class="mb-5 p-3 text-uppercase">Welcome Student !</h4>
-
   <div class="container px-1">
     <div class="row">
       <div class="col">
@@ -21,7 +19,7 @@
       </div>
     </div>
 
-    <div class="col-9">
+    <div class="col-12">
       <!-- Tab content -->
       <div class="tab-content" id="v-tabs-tabContent">
         <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel" aria-labelledby="v-tabs-home-tab">

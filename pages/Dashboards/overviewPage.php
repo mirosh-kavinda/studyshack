@@ -1,218 +1,195 @@
+<?php
 
-		
-		<!-- Charts -->
-		<div class="row wow fadeIn mt-4">
-			
-			<div class="col-md-8 mb-4">
-				
-				<!-- Action buttons -->
-				<button type="button" class="btn btn-md btn-amber mb-4">
-					<i class="fas fa-eye pr-1"></i>
-					<span>Viewed pages</span>
-				</button>
-				<span class="counter counter-lg">22</span>
-				
-				<button type="button" class="btn btn-md btn-indigo mb-4">
-					<i class="fas fa-user pr-1"></i>
-					<span>Registered users</span>
-				</button>
-				<span class="counter counter-lg">22</span>
-				
-				<button type="button" class="btn btn-md btn-success mb-4">
-					<i class="fas fa-comment pr-1"></i>
-					<span>Comments</span>
-				</button>
-				<span class="counter counter-lg">22</span>
-				
-				<button type="button" class="btn btn-md btn-cyan mb-4">
-					<i class="fas fa-envelope pr-1"></i>
-					<span>Messages</span>
-				</button>
-				<span class="counter counter-lg">22</span>
-				
-				<button type="button" class="btn btn-md btn-unique mb-4">
-					<i class="fas fa-file-alt pr-1"></i>
-					<span>Posts</span>
-				</button>
-				<span class="counter counter-lg">12</span>
-				<!-- /.Action buttons -->
-				
-				<!-- Bar -->
-				<div class="card">
-					<div class="card-header text-center">Votes</div>
-					<div class="card-body">
-						<canvas id="barChart"></canvas>
-					</div>
-				</div>
-				<!-- /.Bar -->
 
-			</div>
-			
-			<div class="col-md-4 mb-4">
-				<!-- Pie -->
-				<div class="card mb-4">
-					<div class="card-header text-center">Pie chart</div>
-					<div class="card-body">
-						<canvas id="pieChart"></canvas>
-					</div>
-				</div>
-				<!-- /.Pie -->
+if ($_SESSION['user_type'] != 'staff') {
+	echo '<style>#admin-btns,#table1,#table2,#proj{display:none !important;}</style>';
+	echo '<style>#proj{display:block !important;}</style>';
+} else {
+	echo '<style>#admin-btns,#table1,#table2,{display:block !important;}</style>';
+	echo '<style>#proj{display:none !important;}</style>';
+}
 
-				<!-- List group -->
-				<div class="card mb-4">
-					<div class="card-header text-center">Monitoring</div>
-					<div class="card-body">
-						
-						<div class="list-group list-group-flush">
-							<a href="#!" class="list-group-item list-group-item-action waves-effect">Sales <span class="badge badge-success badge-pill pill-right">23% <i class="fa fa-arrow-up ml-1"></i></span></a>
-						</div>
+?>
 
-						<div class="list-group list-group-flush">
-							<a href="#!" class="list-group-item list-group-item-action waves-effect">Orders <span class="badge badge-danger badge-pill pill-right">12% <i class="fa fa-arrow-down ml-1"></i></span></a>
-						</div>
+<!-- Charts -->
+<div class="row wow fadeIn mt-4" id="admin-btns">
 
-						<div class="list-group list-group-flush">
-							<a href="#!" class="list-group-item list-group-item-action waves-effect">Views <span class="badge badge-info badge-pill pill-right">33 <i class="fas fa-eye ml-1"></i></span></a>
-						</div>
+	<div class="col-md-12 mb-4">
 
-						<div class="list-group list-group-flush">
-							<a href="#!" class="list-group-item list-group-item-action waves-effect">Visitors <span class="badge badge-warning badge-pill pill-right">17% <i class="fas fa-user ml-1"></i></span></a>
-						</div>
+		<!-- Action buttons -->
+		<button type="button" class="btn btn-md btn-indigo mb-4">
+			<i class="fas fa-user pr-1"></i>
+			<span>Registered users</span>
+		</button>
+		<span class="counter counter-lg">22</span>
 
-						<div class="list-group list-group-flush">
-							<a href="#!" class="list-group-item list-group-item-action waves-effect">Comments <span class="badge badge-dark badge-pill pill-right">17 <i class="fas fa-comment ml-1"></i></span></a>
-						</div>
+		<button type="button" class="btn btn-md btn-cyan mb-4">
+			<i class="fas fa-envelope pr-1"></i>
+			<span>Messages</span>
+		</button>
+		<span class="counter counter-lg">22</span>
 
-					</div>
-				</div>
-				<!-- /.List group -->
+		<button type="button" class="btn btn-md btn-unique mb-4">
+			<i class="fas fa-file-alt pr-1"></i>
+			<span>Payments</span>
+		</button>
+		<span class="counter counter-lg">12</span>
+		<!-- /.Action buttons -->
+	</div>
 
-			</div>
 
+</div>
+
+<!-- Tables -->
+<div class="row wow fadeIn" id="proj">
+
+	<div class="card-body">
+		<p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
+		</p>
+		<p class="mb-1" style="font-size: .77rem;">Web Design</p>
+		<div class="progress rounded" style="height: 5px;">
+			<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
-
-		<div class="row wow fadeIn">
-			<div class="col-md-12 mb-4">
-					
-				<!-- Info panels -->
-				<div class="card-deck">
-					<div class="card text-white bg-primary mb-3 mw-2">
-						<div class="card-header">Last post</div>
-						<div class="card-body">
-							<h5 class="card-title">Lorem ipsum dolor...</h5>
-							<p class="card-text text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit officia architecto...</p>
-						</div>
-					</div>
-
-					<div class="card text-white bg-secondary mb-3 mw-2">
-						<div class="card-header">Last comment</div>
-						<div class="card-body">
-							<h5 class="card-title">Lorem ipsum dolor...</h5>
-							<p class="card-text text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit officia architecto...</p>
-						</div>
-					</div>
-
-					<div class="card text-white bg-success mb-3 mw-2">
-						<div class="card-header">Last user</div>
-						<div class="card-body">
-							<h5 class="card-title">Lorem ipsum dolor...</h5>
-							<p class="card-text text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit officia architecto...</p>
-						</div>
-					</div>
-
-					<div class="card text-white bg-danger mb-3 mw-2">
-						<div class="card-header">Last search</div>
-						<div class="card-body">
-							<h5 class="card-title">Lorem ipsum dolor...</h5>
-							<p class="card-text text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit officia architecto...</p>
-						</div>
-					</div>
-				</div>
-				<!-- /.Info panels -->
-
-			</div>
+		<p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+		<div class="progress rounded" style="height: 5px;">
+			<div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
-
-		<!-- Tables -->
-		<div class="row wow fadeIn">
-			
-			<!-- Table #1 -->
-			<div class="col-md-6 mb-4">
-				<div class="card">
-					<div class="card-body">
-						<table class="table table-hover">
-							<thead class="blue-grey lighten-4">
-								<tr>
-									<th>#</th>
-									<th>Caption #1</th>
-									<th>Caption #2</th>
-									<th>Caption #3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Item 1</td>
-									<td>Item 2</td>
-									<td>Item 3</td>
-								</tr>
-								<tr>
-									<th>2</th>
-									<td>Item 1</td>
-									<td>Item 2</td>
-									<td>Item 3</td>
-								</tr>
-								<tr>
-									<th>3</th>
-									<td>Item 1</td>
-									<td>Item 2</td>
-									<td>Item 3</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			<!-- /.Table #1 -->
-
-			<!-- Table #2 -->
-			<div class="col-md-6 mb-4">
-				<div class="card">
-					<div class="card-body">
-						<table class="table table-hover">
-							<thead class="blue lighten-4">
-								<tr>
-									<th>#</th>
-									<th>Caption #1</th>
-									<th>Caption #2</th>
-									<th>Caption #3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Item 1</td>
-									<td>Item 2</td>
-									<td>Item 3</td>
-								</tr>
-								<tr>
-									<th>2</th>
-									<td>Item 1</td>
-									<td>Item 2</td>
-									<td>Item 3</td>
-								</tr>
-								<tr>
-									<th>3</th>
-									<td>Item 1</td>
-									<td>Item 2</td>
-									<td>Item 3</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			<!-- /.Table #2 -->
+		<p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+		<div class="progress rounded" style="height: 5px;">
+			<div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
-		<!-- /.Tables -->
+		<p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+		<div class="progress rounded" style="height: 5px;">
+			<div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+		<p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+		<div class="progress rounded mb-2" style="height: 5px;">
+			<div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+	</div>
+</div>
+<!-- Table #1 -->
+<div class="col-md-12 mb-4" id="table1">
+	<div class="card">
+		<h5 class="text-center mt-3">Student Details</h5>
+		<hr>
+		<div class="card-body">
 
+			<?php
+			// Include config file
+			require_once "../../utils/db_connect.php";
+
+			// Attempt select query execution
+			$sql = "SELECT * FROM student";
+			if ($result = mysqli_query($conn, $sql)) {
+				if (mysqli_num_rows($result) > 0) {
+					echo '<table class="table table-hover table-striped">';
+					echo '<thead class="blue-grey lighten-4">';
+					echo "<tr>";
+					echo "<th>#</th>";
+					echo "<th>Name</th>";
+					echo "<th>Address</th>";
+					echo "<th>Email</th>";
+					echo "<th>Regdate</th>";
+					echo "<th>Telephone</th>";
+					echo "<th>Whatsapp</th>";
+					echo "<th>Action</th>";
+					echo "</tr>";
+					echo "</thead>";
+					echo "<tbody>";
+					while ($row = mysqli_fetch_array($result)) {
+						echo "<tr>";
+						echo "<td>" . $row['s_id'] . "</td>";
+						echo "<td>" . $row['uname'] . "</td>";
+						echo "<td>" . $row['address'] . "</td>";
+						echo "<td>" . $row['email'] . "</td>";
+						echo "<td>" . $row['reg_date'] . "</td>";
+						echo "<td>" . $row['tele'] . "</td>";
+						echo "<td>" . $row['whatsapp'] . "</td>";
+						echo "<td>";
+
+						echo '<a href="update.php?id=' . $row['s_id'] . '" class="mr-3 p-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+						echo '<a href="delete.php?id=' . $row['s_id'] . '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+						echo "</td>";
+						echo "</tr>";
+					}
+					echo "</tbody>";
+					echo "</table>";
+					// Free result set
+					mysqli_free_result($result);
+				} else {
+					echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+				}
+			} else {
+				echo "Oops! Something went wrong. Please try again later.";
+			}
+
+			// Close connection
+
+			?>
+		</div>
+	</div>
+</div>
+<!-- Table #1 -->
+<div class="col-md-12 mb-4" id="table2">
+	<div class="card">
+		<h5 class="text-center mt-3">Teachers Details</h5>
+		<hr>
+		<div class="card-body">
+
+			<?php
+
+
+			// Attempt select query execution
+			$sql = "SELECT * FROM teacher";
+			if ($result = mysqli_query($conn, $sql)) {
+				if (mysqli_num_rows($result) > 0) {
+					echo '<table class="table table-hover table-striped">';
+					echo '<thead class="blue-grey lighten-4">';
+					echo "<tr>";
+					echo "<th>#</th>";
+					echo "<th>Name</th>";
+					echo "<th>Address</th>";
+					echo "<th>Email</th>";
+					echo "<th>Regdate</th>";
+					echo "<th>Telephone</th>";
+					echo "<th>Whatsapp</th>";
+					echo "<th>Action</th>";
+					echo "</tr>";
+					echo "</thead>";
+					echo "<tbody>";
+
+					while ($row = mysqli_fetch_array($result)) {
+						echo "<tr>";
+						echo "<td>" . $row['t_id'] . "</td>";
+						echo "<td>" . $row['uname'] . "</td>";
+						echo "<td>" . $row['address'] . "</td>";
+						echo "<td>" . $row['email'] . "</td>";
+						echo "<td>" . $row['reg_date'] . "</td>";
+						echo "<td>" . $row['tele'] . "</td>";
+						echo "<td>" . $row['whatsapp'] . "</td>";
+						echo "<td>";
+						echo '<a href="update.php?id=' . $row['t_id'] . '" class="mr-3 p-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+						echo '<a href="delete.php?id=' . $row['t_id'] . '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+						echo "</td>";
+						echo "</tr>";
+					}
+					echo "</tbody>";
+					echo "</table>";
+					// Free result set
+					mysqli_free_result($result);
+				} else {
+					echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+				}
+			} else {
+				echo "Oops! Something went wrong. Please try again later.";
+			}
+
+
+			?>
+		</div>
+	</div>
+</div>
+
+</div>
+<!-- /.Tables -->

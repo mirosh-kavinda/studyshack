@@ -17,10 +17,28 @@ function getNextIncrement($table, $db, $con)
 }
 
 
-function getUser($conn, $sql, $email)
+function getUser($conn, $type, $email)
 {
+
+  $sql = "SELECT * FROM $type WHERE email=?";
+
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("s", $email);
+  $stmt->execute();
+  $stmt_result = $stmt->get_result();
+  if ($stmt_result->num_rows > 0) {
+    return $stmt_result->fetch_assoc();
+  } else {
+    return false;
+  }
+}
+
+
+function classExistance($conn, $cname)
+{
+  $sql = "SELECT * FROM class WHERE c_name=?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param("s", $cname);
   $stmt->execute();
   $stmt_result = $stmt->get_result();
   if ($stmt_result->num_rows > 0) {
