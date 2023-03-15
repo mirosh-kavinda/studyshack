@@ -22,7 +22,7 @@ if (isset($_POST["login"])) {
 
       $e_message = 'Hello ' . $_SESSION['login_user'] . '\nWelcome to StudyShack';
       $e_icon = 'success';
-      $e_text = 'You can now view Your <strong>Dashboard </strong> ';
+      $e_text = 'You can now view Your Dashboard for more info! ';
     } else {
       $e_message = 'Password is mismatched';
       $e_icon = 'error';

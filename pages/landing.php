@@ -23,36 +23,27 @@
 </div>
 </header>
 
-
-
 <main>
+  <div class="container">
 
-  <div class="mx-5" style="position: relative; ">
     <!--Section: About-->
-    <section id="about" class="section mt-5 mb-2">
+    <section id="about" class="section mt-5 pt-4 ">
       <!--Secion heading-->
-
-
       <h2 class="text-center my-5 font-weight-bold wow fadeIn" data-wow-delay="0.2s">About StudyShack</h2>
-
       <!--First row-->
       <div class="row">
-
         <!--First column-->
         <div class="col-lg-5 col-md-12 mb-5 pb-4 wow fadeIn" data-wow-delay="0.4s">
-
           <!--Image-->
           <img src="img/about.jpg" class="img-fluid z-depth-1 rounded" alt="My photo">
-
         </div>
         <!--First column-->
-
         <!--Second column-->
         <div class="col-lg-6 dark-grey-text ml-lg-auto col-md-12 wow fadeIn" data-wow-delay="0.4s">
 
           <!--Description-->
           <!--Description-->
-          <p align="justify">Welcome to our StudyShack! We are a team of passionate and experienced professionals
+          <p align="justify" class="mt-3">We are a team of passionate and experienced professionals
             dedicated to providing high-quality online courses and training programs in the field of information
             technology. Our goal is to empower individuals with the knowledge and skills needed to succeed in
             today's
@@ -64,42 +55,24 @@
             regardless of
             their location or background. That's why we have designed our courses to be accessible and affordable,
             without compromising on quality or content.</p>
-
-          <p align="justify">Our courses cover a wide range of topics, from programming and web development to
-            cybersecurity and data science. We use a variety of teaching methods, including videos, interactive
-            quizzes, and hands-on exercises, to ensure that our students get the most out of their learning
-            experience.</p>
-
-
-
         </div>
         <!--Second column-->
-
       </div>
       <!--First row-->
-
     </section>
     <!--Section: About-->
 
-    <hr>
-
     <!--Projects section v.3-->
-    <section id="info" class="section mt-4 mb-5 pb-4">
-
+    <section id="info" class="section pt-3 mx-3 mb-4">
       <!--Section heading-->
       <h2 class="text-center mb-5 font-weight-bold pt-5 pb-4 my-5 wow fadeIn" data-wow-delay="0.2s">What We Offer</h2>
-
       <!--First row-->
       <div class="row wow fadeIn" data-wow-delay="0.4s">
-
         <!--First column-->
         <div class="col-md-12">
-
           <div class="mb-2">
-
             <!--Nav tabs-->
             <ul class="nav md-pills pills-primary d-flex justify-content-center" role="tablist">
-
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#panel31" role="tab">
                   <i class="fas fa-graduation-cap fa-2x"></i>
@@ -108,53 +81,39 @@
               <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#panel32" role="tab">
                   <i class="fas fa-users fa-2x"></i>
-                  <br> 24X7 Support</a>
+                  <br> Support & Help</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#panel33" role="tab">
                   <i class="fas fa-university fa-2x"></i>
                   <br> Financial</a>
               </li>
-
             </ul>
-
           </div>
 
           <!--Tab panels-->
           <div class="tab-content">
-
             <!--Panel 1-->
             <div class="tab-pane fade in show active" id="panel31" role="tabpanel">
-              <br>
-
               <!--First row-->
               <div class="row">
-
                 <!--First column-->
                 <div class="col-lg-5 col-md-12">
 
                   <!--Featured image-->
                   <div class="view overlay z-depth-1 mb-2">
-                    <img src="https://mdbootstrap.com/img/Photos/Others/images/54.jpg" class="rounded img-fluid"
-                      alt="sample image">
+                    <img src="img/teachers.jpg" class="rounded img-fluid" alt="sample image">
                   </div>
                 </div>
-                <!--First column-->
 
-                <!--Second column-->
                 <div class="col-lg-6 ml-lg-auto col-md-12 text-center text-md-left">
 
-                  <!--Title-->
-                  <h4 class="mb-5">Academics Students</h4>
 
                   <!--Description-->
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi
-                    soluta
-                    ratione
-                    quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit
-                    eaque delectus, beatae maxime temporibus maiores quibusdam quasi.Rem magnam ad
-                    perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut
-                    possimus in hic molestias repellendus illo ullam odit quia velit.</p>
+                  <p class="text strong">IT Academy lecturers are professionals in the field of information technology
+                    who are tasked with delivering high-quality educational content to students. They are knowledgeable
+                    in various areas of IT, such as programming languages, database management, cybersecurity, and
+                    networking, among others. </p>
 
                 </div>
                 <!--Second column-->
@@ -186,16 +145,10 @@
                 <div class="col-lg-6 ml-lg-auto col-md-12 text-center text-md-left">
 
                   <!--Title-->
-                  <h4 class="mb-5">Information for Candidates</h4>
 
                   <!--Description-->
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi
-                    soluta
-                    ratione
-                    quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit
-                    eaque delectus, beatae maxime temporibus maiores quibusdam quasi.Rem magnam ad
-                    perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut
-                    possimus in hic molestias repellendus illo ullam odit quia velit.</p>
+                  <p class="text-muted">Lprovide students with a comprehensive understanding of IT concepts and
+                    technologies, as well as hands-on experience in View Moreing them.</p>
 
                 </div>
                 <!--Second column-->
@@ -227,16 +180,10 @@
                 <div class="col-lg-6 ml-lg-auto col-md-12 text-center text-md-left">
 
                   <!--Title-->
-                  <h4 class="mb-5">Financial Aid</h4>
+
 
                   <!--Description-->
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi
-                    soluta
-                    ratione
-                    quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit
-                    eaque delectus, beatae maxime temporibus maiores quibusdam quasi.Rem magnam ad
-                    perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut
-                    possimus in hic molestias repellendus illo ullam odit quia velit.</p>
+                  <p class="text-muted"> The students can View More for finncial aid, withing their accurate details </p>
 
                 </div>
                 <!--Second column-->
@@ -262,232 +209,212 @@
                       class="rounded img-fluid" height="500px" alt="sample image">
                   </div>
                 </div>
-                <!--First column-->
 
-                <!--Second column-->
-                <div class="col-lg-6 ml-lg-auto col-md-12 text-center text-md-left">
-
-                  <!--Title-->
-                  <h4 class="mb-5">Residential Life</h4>
-
-                  <!--Description-->
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi
-                    soluta
-                    ratione
-                    quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit
-                    eaque delectus, beatae maxime temporibus maiores quibusdam quasi.Rem magnam ad
-                    perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut
-                    possimus in hic molestias repellendus illo ullam odit quia velit.</p>
-
-                </div>
-                <!--Second column-->
               </div>
-              <!--First row-->
+              <!--Panel 4-->
 
             </div>
-            <!--Panel 4-->
+            <!--Tab panels-->
 
           </div>
-          <!--Tab panels-->
+          <!--First column-->
 
         </div>
-        <!--First column-->
-
-      </div>
-      <!--First row-->
+        <!--First row-->
 
     </section>
     <!--Projects section v.3-->
 
 
-    <div class="container">
 
 
-      <!--Section: Blog v.2-->
-      <section class="section extra-margins text-center" id="classes">
+    <section class=" section extra-margins  pt-4 mt-4 " id="classes">
 
-        <div class="row">
-          <h3 class="col-8 font-weight-bold">Popular Programmes </h3>
-          <a href="pages/learningProgramme.php" class=" btn btn-info" style="float:right">View More</a>
-        </div>
+      <div class="pt-5 row ">
+        <h2 class=" text-center col font-weight-bold">Popular Programmes </h2>
+        <a href="pages/all_classes.php" class=" col-3 btn btn-outline-info  btn-rounded"
+          style="justify-content: end;">View
+          More</a>
 
-        <!--Grid row-->
-        <div class="row mb-5 p-5 pb-3">
+      </div>
 
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
+      <!--Grid row-->
+      <div class="row mb-5  pt-4 mt-4 pb-3">
 
-            <!--Card Light-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="img/programs/prog1.jpg" class="card-img-top" height="200px" alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--/.Card image-->
-              <!--Card content-->
-              <div class="card-body">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
 
-                <!--Title-->
-                <h6 class="card-title darkgrey-text">
-                  <strong>Python Zero To Hero</strong>
-                </h6>
-                <hr>
-                <!--Text-->
-                <p class="font-small">Some quick example text to build on the card title and make up the bulk of
-                  the
-                  card's
-                  content.
-                </p>
-                <a href="img/programs/prog2.jpg" class="black-text d-flex flex-row-reverse">
-                  <p class="waves-effect p-2 font-small blue-text mb-0">Apply
-                    <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
-                  </p>
-                </a>
-              </div>
-              <!--/.Card content-->
+          <!--Card Light-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/programs/prog1.jpg" class="card-img-top" height="200px" alt="">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
             </div>
-            <!--/.Card Light-->
+            <!--/.Card image-->
+            <!--Card content-->
+            <div class="card-body">
 
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
-
-            <!--Card Light-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="img/programs/prog2.jpg" class="card-img-top" height="200px" alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--/.Card image-->
-              <!--Card content-->
-              <div class="card-body">
-
-                <!--Title-->
-                <h6 class="card-title darkgrey-text">
-                  <strong>Arduino For juniors</strong>
-                </h6>
-                <hr>
-                <!--Text-->
-                <p class="font-small">Some quick example text to build on the card title and make up the bulk of
-                  the
-                  card's
-                  content.
+              <!--Title-->
+              <h6 class="card-title darkgrey-text">
+                <strong>Python Zero To Hero</strong>
+              </h6>
+              <hr>
+              <!--Text-->
+              <p class="font-small">Some quick example text to build on the card title and make up the bulk of
+                the
+                card's
+                content.
+              </p>
+              <a href="pages/classView.php?id=1" class="black-text d-flex flex-row-reverse">
+                <p class="waves-effect p-2 font-small blue-text mb-0">View More
+                  <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
                 </p>
-                <a href="pages/Applyforclass.php" class="black-text d-flex flex-row-reverse">
-                  <p class="waves-effect p-2 font-small blue-text mb-0">Apply
-                    <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
-                  </p>
-                </a>
-              </div>
-              <!--/.Card content-->
+              </a>
             </div>
-            <!--/.Card Light-->
-
+            <!--/.Card content-->
           </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
-
-            <!--Card Light-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="img/programs/prog3.jpg" class="card-img-top" height="200px" alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--/.Card image-->
-
-              <!--Card content-->
-              <div class="card-body">
-
-                <!--Title-->
-                <h6 class="card-title darkgrey-text">
-                  <strong>Machine Learning Course for A/L Students</strong>
-                </h6>
-                <hr>
-                <!--Text-->
-                <p class="font-small">Some quick example text to build on the card title and make up the bulk of
-                  the
-                  card's
-                  content.
-                </p>
-                <a href="pages/Applyforclass.php" class="black-text d-flex flex-row-reverse">
-                  <p class="waves-effect p-2 font-small blue-text mb-0">Apply
-                    <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
-                  </p>
-                </a>
-              </div>
-              <!--/.Card content-->
-            </div>
-            <!--/.Card Light-->
-
-          </div>
-          <!--Grid column-->
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
-
-            <!--Card Light-->
-            <div class="card">
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="img/programs/prog4.jpg" class="card-img-top" height="200px" alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--/.Card image-->
-              <!--Card content-->
-              <div class="card-body">
-
-                <!--Title-->
-                <h6 class="card-title darkgrey-text">
-                  <strong>Computer Hardware for O/L Students</strong>
-                </h6>
-                <hr>
-                <!--Text-->
-                <p class="font-small">Some quick example text to build on the card title and make up the bulk of
-                  the
-                  card's
-                  content.
-                </p>
-                <a href="pages/Applyforclass.php" class="black-text d-flex flex-row-reverse">
-                  <p class="waves-effect p-2 font-small blue-text mb-0">Apply
-                    <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
-                  </p>
-                </a>
-              </div>
-              <!--/.Card content-->
-            </div>
-            <!--/.Card Light-->
-
-          </div>
-          <!--Grid column-->
+          <!--/.Card Light-->
 
         </div>
-        <!--First row-->
-      </section>
-      <!--Section: Blog v.2-->
+        <!--Grid column-->
 
-    </div>
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
+
+          <!--Card Light-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/programs/prog2.jpg" class="card-img-top" height="200px" alt="">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <!--/.Card image-->
+            <!--Card content-->
+            <div class="card-body">
+
+              <!--Title-->
+              <h6 class="card-title darkgrey-text">
+                <strong>Arduino For juniors</strong>
+              </h6>
+              <hr>
+              <!--Text-->
+              <p class="font-small">Some quick example text to build on the card title and make up the bulk of
+                the
+                card's
+                content.
+              </p>
+              <a href="pages/classView.php?id=2" class="black-text d-flex flex-row-reverse">
+                <p class="waves-effect p-2 font-small blue-text mb-0">View More
+                  <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
+                </p>
+              </a>
+            </div>
+            <!--/.Card content-->
+          </div>
+          <!--/.Card Light-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
+
+          <!--Card Light-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/programs/prog3.jpg" class="card-img-top" height="200px" alt="">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <!--/.Card image-->
+
+            <!--Card content-->
+            <div class="card-body">
+
+              <!--Title-->
+              <h6 class="card-title darkgrey-text">
+                <strong>Machine Learning Course for A/L Students</strong>
+              </h6>
+              <hr>
+              <!--Text-->
+              <p class="font-small">Some quick example text to build on the card title and make up the bulk of
+                the
+                card's
+                content.
+              </p>
+              <a href="pages/classView.php?id=3" class="black-text d-flex flex-row-reverse">
+                <p class="waves-effect p-2 font-small blue-text mb-0">View More
+                  <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
+                </p>
+              </a>
+            </div>
+            <!--/.Card content-->
+          </div>
+          <!--/.Card Light-->
+
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
+
+          <!--Card Light-->
+          <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="img/programs/prog4.jpg" class="card-img-top" height="200px" alt="">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <!--/.Card image-->
+            <!--Card content-->
+            <div class="card-body">
+
+              <!--Title-->
+              <h6 class="card-title darkgrey-text">
+                <strong>Computer Hardware for O/L Students</strong>
+              </h6>
+              <hr>
+              <!--Text-->
+              <p class="font-small">Some quick example text to build on the card title and make up the bulk of
+                the
+                card's
+                content.
+              </p>
+              <a href="pages/classView.php?id=4" class="black-text d-flex flex-row-reverse">
+                <p class="waves-effect p-2 font-small blue-text mb-0">View More
+                  <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
+                </p>
+              </a>
+            </div>
+            <!--/.Card content-->
+          </div>
+          <!--/.Card Light-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--First row-->
+    </section>
+    <!--Section: Blog v.2-->
+
+  </div>
   </div>
 
   <div class="container">
 
-    <section id="testimonials" class="section mb-5">
+    <section id="testimonials" class="section mb-5 pt-4">
 
       <!--Section heading-->
-      <h2 class="text-center mb-5 my-5 pt-5 pb-4 font-weight-bold wow fadeIn" data-wow-delay="0.2s">What Students
+      <h2 class="text-center mb-5 my-5 pb-4 font-weight-bold wow fadeIn" data-wow-delay="0.2s">What Students
         said:</h2>
 
       <div class="row">
@@ -799,61 +726,10 @@
 
   </div>
   <!-- login -->
-  <div class="container mt-5">
-    <section id="Login-User" class="section mb-5 ">
-      <h2 class="text-center  mt-5  font-weight-bold wow fadeIn" data-wow-delay="0.2s">Log In To Your Account</h2>
-      <div class="row d-flex justify-content-center align-items-center  mt-4">
-        <div class="col-md-9 col-lg-6 col-xl-5">
-          <img src="img/draw2.png" class="img-fluid" alt="Sample image">
-        </div>
-        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
-          <form action="index.php" class="border-dark  " method="Post">
-
-            <!-- Email input -->
-            <div class="form-outline mt-2 ">
-              <input type="email" id="form3Example3" class="form-control form-control-lg border-dark"
-                placeholder="Enter a valid email address" name="username" />
-              <label class="form-label" for="form3Example3">Email address</label>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-3">
-              <input type="password" id="form3Example4" class="form-control form-control-lg border-dark"
-                placeholder="Enter password" name="password" />
-              <label class="form-label" for="form3Example4">Password</label>
-            </div>
-
-
-            <div class="col-md-6 mb-4">
-              <h6 class="mb-0 me-4">Type :
-                <select class="select" name="logtype">
-                  <option value="student">Student</option>
-                  <option value="teacher">Teacher</option>
-                  <option value="staff">Staff</option>
-                </select>
-              </h6>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-              <span><a href="#!" class="text-body"> Forgot password? Reset</a></span>
-            </div>
-
-            <div class="text-center text-lg-start mt-4 pt-2">
-
-              <input type="submit" class="btn btn-info btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"
-                name="login" value="Login" />
-
-              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account?
-                <a href="pages/Register/registerSection.php" class="link-danger">Register</a>
-              </p>
-            </div>
-
-          </form>
-        </div>
-      </div>
-    </section>
-  </div>
+  <section id="Login-User" class="section mb-5 pt-4 mt-4">
+   <?php include "../utils/loginPage.php" ?>
+  </section>
 </main>
 <!--Main content-->
 
@@ -880,7 +756,7 @@
             <a type="button" class="btn-floating btn-blue-2 ">
               <i class="fab fa-dribbble"></i>
             </a>
-       
+
           </div>
         </div>
         <!--First column-->

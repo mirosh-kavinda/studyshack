@@ -1,8 +1,20 @@
 <?php
 
-
-
-
+// php code using for load web content without refreshing the webpage 
+if (
+  isset($_SERVER['HTTPS']) &&
+  ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+  isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+  $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'
+) {
+  $ssl = 'https';
+} else {
+  $ssl = 'http';
+}
+$app_url = ($ssl)
+  . "://" . $_SERVER['HTTP_HOST']
+  . (dirname($_SERVER["SCRIPT_NAME"]) == DIRECTORY_SEPARATOR ? "" : "/")
+  . trim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
 
 include 'utils/authenticate.php';
 // this for hide undeclared error
@@ -27,12 +39,16 @@ if ($_SESSION["login_user"]) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>StudyShack</title>
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
+
   <!--JQuery-->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
@@ -48,7 +64,7 @@ if ($_SESSION["login_user"]) {
   <!-- Error handelling alert box -->
   <script>
     $(function() {
-      $("#post-placeholder").load("pages/landing.html");
+      $("#post-placeholder").load("pages/landing.php");
     });
     // loading html element to the  main layout
     $(function() {
@@ -74,15 +90,14 @@ if ($_SESSION["login_user"]) {
     }
   </script>
   <header>
+
     <!--Navigation bar-->
     <div id="nav-placeholder"></div>
-
 
     <!-- Content load here -->
     <div id="post-placeholder"></div>
 
-
-    <!-- SCRIPTS --> 
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mdb.min.js"></script>
 

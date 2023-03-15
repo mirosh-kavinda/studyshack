@@ -1,149 +1,136 @@
-w<?php
+<?php
 // fetch products from database with particular id 
 
-include "db.php";
+include "../utils/db_connect.php";
+session_start();
+error_reporting(E_ALL);
+ini_set("display_errors", NULL);
 
-// get the product id using cookie
+if ($_SESSION['login_user']) {
+    if ($_SESSION['user_type'] != 'student') {
+        echo '<style>,#staffmember{display:block !important;}</style>';
+        echo '<style>#signBack ,#applyclass{display:none !important;}</style>';
+    } else {
+        echo '<style>#applyclass{display:block !important;}</style>';
+        echo '<style>#signBack{display:none !important;}</style>';
+    }
+}else{
+    echo '<style>#signBack{display:block !important;}</style>';
+}
 
-$stmt = $con->prepare("SELECT * FROM products where p_id=?");
-$stmt->bind_param("s", $p_get);
-$stmt->execute();
-$stmt_result = $stmt->get_result();
 
 
+if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
+
+    $id =  trim($_GET["id"]);
+    $stmt = $conn->prepare("SELECT * FROM class where c_id=?");
+    $stmt->bind_param("d", $id);
+    $stmt->execute();
+    $stmt_result = $stmt->get_result();
+}
+
+
+$data = "";
 if ($stmt_result->num_rows > 0) {
 
     $data = $stmt_result->fetch_assoc();
-    $_SESSION["p_name"] = $data['p_name'];
-    $_SESSION["p_variety"] = $data['p_variety'];
-    $_SESSION["p_category"] = $data['p_category'];
-    $_SESSION["p_desc"] = $data['p_desc'];
-    $_SESSION["p_price"] = $data['p_price'];
-    $_SESSION["p_src"] = $data['p_src'];
-    $_SESSION["p_stock"] = $data['p_stock'];
 } else {
-
     die;
 }
 
+
 ?>
 
-<!-- product image generate script -->
-<script>
-    var m_img = document.getElementById('ProductImg');
-    m_img.src = '<?php print_r($_SESSION["p_src"]) ?>' + '2.jpg';
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <style type="text/stylesheet">
+    </style>
+</head>
 
-    const container = document.getElementById('products-cards-container');
-    var img_arr = [];
-    for (var i = 1; i <= <?php print_r($_SESSION["p_variety"]) ?>; i++) {
-        img_arr.push({
-            img: '<?php print_r($_SESSION["p_src"]) ?>' + i + '.jpg'
-        });
-    }
+<body>
 
-    function returnCards() {
-        return "<div class=\"small-img-col\">" + img_arr.map(data => `
-             <img src="${data.img}" class="small-img"/>
-             `).join('') + "</div>";
-    }
-    container.innerHTML = returnCards(img_arr);
-</script>
+    <!-- Breadcrumbs & Search -->
+    <div class="container-fluid  ">
+        <div class="card mb-4 wow fadeIn grey lighten-4">
+            <div class="card-body d-sm-flex justify-content-between">
+                <h4 class="mb-1 mb-sm-0 ">
+                    <a href="../index.php">Home</a>
+                    <span>/Class View </span>
 
-
-<!-- product view html code  -->
-<link rel="stylesheet" href="css/productView.css">
-<div id="ProductDetails ">
-    <p id="cartNumber"></p>
-    <div class="small-container single-product">
-        <div class="row">
-            <div class="col-2" height="100vh">
-                <img src="" width="100%" id="ProductImg">
-                <div class=" d-flex jusify-content-center small-img-row ">
-                    <div id="products-cards-container"></div>
-                </div>
-            </div>
-
-            <div class="col-2">
-                <form method='post' action="index.php?action=add&id=<?php echo $p_get ?>">
-                    <p><?php print_r($_SESSION["p_category"]) ?></p>
-                    <h1 id="ProductDetailsName"><?php print_r($_SESSION["p_name"]) ?></h1>
-                    <h4 id="ProductDetailsPrice"><?php print_r($_SESSION["p_price"]) ?></h4>
-
-                    <!-- this for pass value to the cart  -->
-                    <input type="hidden" name="hidden_name" value="<?php print_r($_SESSION["p_name"]) ?>">
-                    <input type="hidden" name="hidden_price" value="<?php print_r($_SESSION["p_price"]) ?>">
-                    <input type="hidden" name="hidden_src" value="<?php print_r($_SESSION["p_src"]) ?>">
-                    <input type="number" name="quantity" id='qty' class="form-control" value="1">
-                    <label for="qty">Available : <?php print_r($_SESSION["p_stock"]) ?></label>
-                    <br>
-
-                    <input type="submit" class="btn" type="submit" name="add" value="Add">
-
-
-
-
-                    <h3>Product Details</h3>
-                    <br>
-                    <p><?php print_r($_SESSION["p_desc"]) ?></p>
-                </form>
+                </h4>
             </div>
         </div>
     </div>
 
-    <!-- alternative products-Static -->
-    <div class="small-container">
-        <h2 class="center">You also llke</h2>
-    </div>
-    <div class="small-container">
-        <div class="row">
-            <div class="col-4">
-                <img src="images/ProductView/1.jfif">
-                <h4>Seashell Earring</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>$50.0</p>
+    <div class="container">
+        <div class="card">
+            <!--Card image-->
+            <div class="view overlay">
+                <img id='ProductImg' class="card-img-top" height="350px" width="400px" alt="">
+                <a>
+
+                </a>
             </div>
-            <div class="col-4">
-                <img src="images/ProductView/2.jfif">
-                <h4>Seashell Necklace</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+
+            <div class="card-body">
+
+                <div class="col-xl-12">
+                    <div class="card-body  text-black">
+                        <form action="payment.php" method="post">
+                            <div class="col-md-12 mb-2">
+                                <div class="col-md-12 mb-2">
+                                    <label class="form-label" for="class_name">Class Name</label>
+                                    <input disabled type="text" id="class_name" name="c_name" class="form-control form-control-lg" value="<?php echo $data['c_name'] ?>" />
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <label class="form-label" for="class_teacher">Class Lecturer</label>
+                                    <input disabled type="text" id="class_teacher" name="c_cordinator" class="form-control form-control-lg" value="<?php echo $data['c_cordinator'] ?>" />
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <label class="form-label" for="clas_description">Class Description</label>
+                                    <input disabled type="text" id="clas_description" name="c_desc" class="form-control form-control-lg" value="<?php echo $data['c_desc'] ?>" />
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <label class="form-label" for="class_fee">Class Fee</label>
+                                    <input disabled type="text" id="class_fee" name="c_fee" class="form-control form-control-lg" value="<?php echo $data['c_fee'] ?>" />
+
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <label class="form-label" for="class_duration">Class Duration</label>
+                                    <input disabled type="text" id="class_duration" name="c_duration" class="form-control form-control-lg" value="<?php echo $data['c_duration'] ?>" />
+
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <label class="form-label" for="class_category">Class Category</label>
+                                    <input disabled type="text" id="class_category" name="c_category" class="form-control form-control-lg" value="<?php echo $data['c_category'] ?>" />
+
+                                </div>
+                            </div>
+                            <div id="signBack" class="d-flex justify-content-center">
+                                <p class="text-center strong pt-4"> <strong>Please Login With Your Student Account to Apply Class<strong></p>
+                                <a type="button" href="../index.php" class="text-center btn btn-info btn-lg ">SignIn </a>
+                            </div>
+                            <p id="staffmember" class="text-center strong pt-4"> <strong>Teachers And Staff Can Only view tha class<strong></p>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a type="button" id="applyclass" name="applyclass" class="btn btn-info btn-lg ms-2" data-mdb-toggle="modal" data-mdb-target="#exampleModal"  > Apply For Class</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <p>$20.0</p>
             </div>
-            <div class="col-4">
-                <img src="images/ProductView/3.jfif">
-                <h4>Seashell Necklace</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>$70.0</p>
-            </div>
-            <div class="col-4">
-                <img src="images/ProductView/4.jfif">
-                <h4>Seashell Necklace</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>$40.0</p>
-            </div>
-        </div>
-    </div>
-</div>
+
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+
+            <script>
+                var m_img = document.getElementById('ProductImg');
+                m_img.src = '<?php print_r($data["c_scr"]); ?> ';
+            </script>
+</body>
+<?php
+include "payment.php";
+?>
+

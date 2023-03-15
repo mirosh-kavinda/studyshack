@@ -1,5 +1,14 @@
 <?php
 
+require_once "../../utils/db_connect.php";
+
+// $sql = "SELECT (SELECT COUNT(s_id) from student) as count1 ,
+// 	(SELECT count(t_id) from teacher) as count2 , (SELECT COUNT(s_id) from staff) as count3 ";
+
+$regusers=6;
+// $result = mysqli_query($conn, $sql);
+// $row = mysqli_fetch_array($result);
+// $regusers =$row[0];
 
 if ($_SESSION['user_type'] != 'staff') {
 	echo '<style>#admin-btns,#table1,#table2,#proj{display:none !important;}</style>';
@@ -21,19 +30,19 @@ if ($_SESSION['user_type'] != 'staff') {
 			<i class="fas fa-user pr-1"></i>
 			<span>Registered users</span>
 		</button>
-		<span class="counter counter-lg">22</span>
+		<span class="counter counter-lg"><?php echo $regusers; ?></span>
 
 		<button type="button" class="btn btn-md btn-cyan mb-4">
 			<i class="fas fa-envelope pr-1"></i>
 			<span>Messages</span>
 		</button>
-		<span class="counter counter-lg">22</span>
+		<span class="counter counter-lg">0</span>
 
-		<button type="button" class="btn btn-md btn-unique mb-4">
+		<button type="button" class="btn btn-md btn-unique mb-4" data-mdb-toggle="modal" data-mdb-target="#exampleModal1" >
 			<i class="fas fa-file-alt pr-1"></i>
 			<span>Payments</span>
 		</button>
-		<span class="counter counter-lg">12</span>
+		<span class="counter counter-lg">1</span>
 		<!-- /.Action buttons -->
 	</div>
 
@@ -76,9 +85,7 @@ if ($_SESSION['user_type'] != 'staff') {
 		<div class="card-body">
 
 			<?php
-			// Include config file
-			require_once "../../utils/db_connect.php";
-
+			include "paymentView.php";
 			// Attempt select query execution
 			$sql = "SELECT * FROM student";
 			if ($result = mysqli_query($conn, $sql)) {
