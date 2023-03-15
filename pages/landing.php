@@ -1,30 +1,5 @@
-<div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}'
-  style="background-image: url('img/landing.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-  <div class="mask rgba-black-strong">
-    <div class="container h-100 d-flex justify-content-center align-items-center">
-      <div class="row smooth-scroll">
-        <div class="col-md-12 white-text text-center">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <h2 class="display-3 font-weight-bold mb-2">StudyShack Institute</h2>
-            <hr class="hr-light">
-            <h3 class="subtext-header mt-4 mb-5">Empowering young minds to explore the world of technology.</h3>
-
-            <div class="input-group input-group-lg">
-              <input type="text" class="form-control form-control-lg rounded " placeholder="Type Keywords"
-                aria-label="Type Keywords" aria-describedby="basic-addon2" />
-              <span class="input-group-text border-0 bg-info" id="basic-addon2"><i class="fas fa-search "></i></span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</header>
-
 <main>
-  <div class="container">
+  <div class="mx-5">
 
     <!--Section: About-->
     <section id="about" class="section mt-5 pt-4 ">
@@ -43,18 +18,18 @@
 
           <!--Description-->
           <!--Description-->
-          <p align="justify" class="mt-3">We are a team of passionate and experienced professionals
+          <h4 align="justify" class="mt-5 text-lg pt-5">We are a team of passionate and experienced professionals
             dedicated to providing high-quality online courses and training programs in the field of information
             technology. Our goal is to empower individuals with the knowledge and skills needed to succeed in
             today's
             fast-paced and ever-evolving digital world.
 
-          </p>
+          </h4>
 
-          <p align="justify">We believe that everyone deserves access to quality education and training,
+          <h4 align="justify">We believe that everyone deserves access to quality education and training,
             regardless of
             their location or background. That's why we have designed our courses to be accessible and affordable,
-            without compromising on quality or content.</p>
+            without compromising on quality or content.</h4>
         </div>
         <!--Second column-->
       </div>
@@ -110,10 +85,10 @@
 
 
                   <!--Description-->
-                  <p class="text strong">IT Academy lecturers are professionals in the field of information technology
+                  <h4 class="text strong mt-4 pt-4">IT Academy lecturers are professionals in the field of information technology
                     who are tasked with delivering high-quality educational content to students. They are knowledgeable
                     in various areas of IT, such as programming languages, database management, cybersecurity, and
-                    networking, among others. </p>
+                    networking, among others. </h4>
 
                 </div>
                 <!--Second column-->
@@ -135,8 +110,7 @@
 
                   <!--Featured image-->
                   <div class="view overlay z-depth-1 mb-2">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2840%29.jpg"
-                      class="rounded img-fluid" height="500px" alt="sample image">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2840%29.jpg" class="rounded img-fluid" height="500px" alt="sample image">
                   </div>
                 </div>
                 <!--First column-->
@@ -147,8 +121,8 @@
                   <!--Title-->
 
                   <!--Description-->
-                  <p class="text-muted">Lprovide students with a comprehensive understanding of IT concepts and
-                    technologies, as well as hands-on experience in View Moreing them.</p>
+                  <h4 class="text-muted">Lprovide students with a comprehensive understanding of IT concepts and
+                    technologies, as well as hands-on experience in View Moreing them.</h4>
 
                 </div>
                 <!--Second column-->
@@ -170,8 +144,7 @@
 
                   <!--Featured image-->
                   <div class="view overlay z-depth-1 ">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2841%29.jpg"
-                      class="rounded img-fluid" height="500px" alt="sample image">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2841%29.jpg" class="rounded img-fluid" height="500px" alt="sample image">
                   </div>
                 </div>
                 <!--First column-->
@@ -205,8 +178,7 @@
 
                   <!--Featured image-->
                   <div class="view overlay z-depth-1 mb-2">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2842%29.jpg"
-                      class="rounded img-fluid" height="500px" alt="sample image">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2842%29.jpg" class="rounded img-fluid" height="500px" alt="sample image">
                   </div>
                 </div>
 
@@ -232,8 +204,7 @@
 
       <div class="pt-5 row ">
         <h2 class=" text-center col font-weight-bold">Popular Programmes </h2>
-        <a href="pages/all_classes.php" class=" col-3 btn btn-outline-info  btn-rounded"
-          style="justify-content: end;">View
+        <a href="pages/all_classes.php" class=" col-3 btn btn-outline-info  btn-rounded" style="justify-content: end;">View
           More</a>
 
       </div>
@@ -420,8 +391,7 @@
       <div class="row">
 
         <!--Carousel Wrapper-->
-        <div id="multi-item-example" class="carousel testimonial-carousel slide carousel-multi-item wow fadeIn"
-          data-ride="carousel">
+        <div id="multi-item-example" class="carousel testimonial-carousel slide carousel-multi-item wow fadeIn" data-ride="carousel">
 
 
 
@@ -728,7 +698,7 @@
   <!-- login -->
 
   <section id="Login-User" class="section mb-5 pt-4 mt-4">
-   <?php include "../utils/loginPage.php" ?>
+    <?php include "../utils/loginPage.php" ?>
   </section>
 </main>
 <!--Main content-->
@@ -801,8 +771,7 @@
     </div>
   </div>
   <!--Footer Links-->
-  <button id="scroll-top-btn" class="btn btn-info" style="border-radius:100px;" title="Scroll to top"><i
-      class="fas fa-arrow-up"></i></button>
+  <button id="scroll-top-btn" class="btn btn-info" style="border-radius:100px;" title="Scroll to top"><i class="fas fa-arrow-up"></i></button>
   <!--Copyright-->
   <div class="footer-copyright py-3 text-center">
     <div class="container-fluid">
@@ -816,18 +785,18 @@
   new WOW().init();
 
   //Modal
-  $("#myModal").on("shown.bs.modal", function () {
+  $("#myModal").on("shown.bs.modal", function() {
     $("#myInput").focus();
   });
 
   // Material Select Initialization
-  $(document).ready(function () {
+  $(document).ready(function() {
     $(".mdb-select").material_select();
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     // Show/hide the button depending on the user's scroll position
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       if ($(this).scrollTop() > 100) {
         $("#scroll-top-btn").fadeIn();
       } else {
@@ -835,9 +804,8 @@
       }
     });
     // When the button is clicked, smoothly scroll to the top of the page
-    $("#scroll-top-btn").click(function () {
-      $("html, body").animate(
-        {
+    $("#scroll-top-btn").click(function() {
+      $("html, body").animate({
           scrollTop: 0,
         },
         800
@@ -845,5 +813,4 @@
       return false;
     });
   });
-
 </script>

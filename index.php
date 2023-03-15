@@ -89,17 +89,19 @@ if ($_SESSION["login_user"]) {
       });
     }
   </script>
-  <header>
 
+  <header>
     <!--Navigation bar-->
     <div id="nav-placeholder"></div>
+  </header>
+  <!--Search Result-->
+  <div id="searchresult"></div>
+  <!-- Content load here -->
+  <div id="post-placeholder"></div>
 
-    <!-- Content load here -->
-    <div id="post-placeholder"></div>
-
-    <!-- SCRIPTS -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
 
 </body>
 

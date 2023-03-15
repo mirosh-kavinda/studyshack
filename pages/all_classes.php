@@ -43,7 +43,7 @@
             ?>
                     <div class="col ">
                         <div class="card">
-                            <img src="<?php echo $row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
+                            <img src="<?php echo "../".$row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
                             <div class="card-body">
                                 <h5 class="card-title"> <?php echo $row['c_name']; ?></h5>
                                 <p class="card-text">
@@ -78,7 +78,7 @@
             ?>
                     <div class="col">
                         <div class="card">
-                            <img src="<?php echo $row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
+                            <img src="<?php echo "../".$row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
                             <div class="card-body">
                                 <h5 class="card-title"> <?php echo $row['c_name']; ?></h5>
                                 <p class="card-text">

@@ -19,24 +19,42 @@
       </div>
     </div>
 
+
+    <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      // loading html element to the  main layout
+      $(function() {
+        $("#tab1").load("overviewPage.php");
+      });
+
+      $(function() {
+        $("#tab2").load("materialSection.php");
+      });
+
+      $(function() {
+        $("#tab3").load("userProfile.php");
+      });
+    </script>
+
+
+
+
     <div class="col-12">
       <!-- Tab content -->
       <div class="tab-content" id="v-tabs-tabContent">
         <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel" aria-labelledby="v-tabs-home-tab">
-          <?php include "overviewPage.php" ?>
+          <div id="tab1"></div>
         </div>
       </div>
       <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
-        <?php
-        include("materialSection.php"); ?>
+        <div id="tab2"></div>
       </div>
       <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel" aria-labelledby="v-tabs-messages-tab">
-        <?php
-        include("userProfile.php"); ?>
+        <div id="tab3">
+        </div>
       </div>
+      <!-- Tab content -->
     </div>
-    <!-- Tab content -->
   </div>
-</div>
 </div>
 </div>

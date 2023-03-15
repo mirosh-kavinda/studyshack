@@ -1,11 +1,11 @@
 <?php
-
+session_start();
 require_once "../../utils/db_connect.php";
 
 // $sql = "SELECT (SELECT COUNT(s_id) from student) as count1 ,
 // 	(SELECT count(t_id) from teacher) as count2 , (SELECT COUNT(s_id) from staff) as count3 ";
 
-$regusers=6;
+$regusers = 6;
 // $result = mysqli_query($conn, $sql);
 // $row = mysqli_fetch_array($result);
 // $regusers =$row[0];
@@ -38,7 +38,7 @@ if ($_SESSION['user_type'] != 'staff') {
 		</button>
 		<span class="counter counter-lg">0</span>
 
-		<button type="button" class="btn btn-md btn-unique mb-4" data-mdb-toggle="modal" data-mdb-target="#exampleModal1" >
+		<button type="button" class="btn btn-md btn-unique mb-4" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
 			<i class="fas fa-file-alt pr-1"></i>
 			<span>Payments</span>
 		</button>

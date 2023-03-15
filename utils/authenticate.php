@@ -5,7 +5,7 @@ session_start();
 include "db_connect.php";
 include "functions.php";
 
-
+$email;
 // user login  function  
 if (isset($_POST["login"])) {
 
@@ -50,7 +50,7 @@ else if (isset($_POST["sregister"])) {
   $password = $_POST["spassword"];
   $date = date("Y/m/d");
 
-  $data = getUser($conn, 1, $email);
+  $data = getUser($conn, "student", $email);
 
   if ($data) {
 
@@ -58,10 +58,17 @@ else if (isset($_POST["sregister"])) {
     $e_icon = 'error';
     $e_text = 'Please login to the system  using creditionals ';
   } else {
-    $sql1 = "INSERT INTO student(uname,email,s_tele,s_wtsapp,s_address,s_grade,s_gender,password,reg_date) VALUES('$Name','$email','$Tele','$Wtsapp','$Address','$Grade' ,'$Gender','$password','$date');";
+    $sql = "INSERT INTO student(uname,email,tele,whatsapp,address,grade,gender,password,reg_date) VALUES('$Name','$email','$Tele','$Wtsapp','$Address','$Grade' ,'$Gender','$password','$date');";
+    if (mysqli_query($conn, $sql)) {
+      $e_message = $email;
+      $e_message .= ' : is registered  successfully';
+      $e_icon = 'success';
+      $e_text = 'You can log with your creditionals! ';
+    } else {
+      echo "Error." . $sql . "<br>" . mysqli_error($conn);
+    }
   }
-
-  //student registration code ends here
+  //teacher registration code ends here
 } else if (isset($_POST["tregister"])) {
   $Name = $_POST["tname"];
   $Email = $_POST["temail"];
@@ -74,23 +81,39 @@ else if (isset($_POST["sregister"])) {
   $date = date("Y/m/d");
   $grades = $_POST['grade'];
 
-  $data = getUser($conn, 2, $email);
+  $data = getUser($conn, "teacher", $Email);
 
   if ($data) {
     $e_message = 'User Already Exist!';
     $e_icon = 'error';
     $e_text = 'Please login to the system  using creditionals ';
   } else {
-    $sql2 = "INSERT INTO teacher (uname,email,t_tele,t_whtsapp,t_address,t_gender,password,reg_date) VALUES('$Name','$Email','$Tele','$Wtsapp','$Address','$Gender','$Password','$date');";
+    $sql = "INSERT INTO teacher (uname,email,tele,whatsapp,address,gender,password,reg_date) VALUES('$Name','$Email','$Tele','$Wtsapp','$Address','$Gender','$Password','$date');";
+    if (mysqli_query($conn, $sql)) {
+      $e_message = $Email;
+      $e_message .= ' : is registered  successfully';
+      $e_icon = 'success';
+      $e_text = 'You can log with your creditionals! ';
+    } else {
+      echo "Error." . $sql . "<br>" . mysqli_error($conn);
+    }
   }
 
-  $items = "";
-  $teachId = getNextIncrement('teach_sub', $db, $conn);
+
+
+  $teachId = getNextIncrement('teach_sub', $dbname, $conn);
   foreach ((array) $grades as $grade) {
     $int = mysqli_insert_id($conn) + 1;
 
-    $sql3 = "INSERT INTO teach_sub (t_id,t_grade) VALUES('$int','$grade') ";
+    $sql = "INSERT INTO teach_sub (t_id,t_grade) VALUES('$int','$grade') ";
+    if (mysqli_query($conn, $sql)) {
+    } else {
+      echo "Error." . $sql . "<br>" . mysqli_error($conn);
+    }
   }
+  $e_message .= 'Teachsubject table successfully';
+  $e_icon = 'success';
+  $e_text = 'You can log with your creditionals! ';
 }
 //user logout function 
 else if (isset($_GET["logout"])) {

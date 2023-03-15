@@ -1,42 +1,94 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <strong>StudyShack</strong>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!--Links-->
-      <ul class="navbar-nav mr-auto smooth-scroll">
-
-        <li class="nav-item">
-          <a class="nav-link" href="#about" data-offset="30">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#info" data-offset="100">Facilities</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#classes" data-offset="100">Classes</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonials" data-offset="40">Reviews</a>
-        </li>
-
-      </ul>
-      <div class="navbar-nav  smooth-scroll d-flex flex-row-reverse ">
-        <div class="nav-item">
-          <li id="signin"> <a type='btn ' class="btn btn-info btn-rounded glow " href="#Login-User" data-offset="10">
-              Sign in</a></li>
-          <li id="signout"> <a class="btn btn-info btn-rounded" href="index.php?logout">Sign
-              Out</a></li>
+<div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <strong>StudyShack</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--Links-->
+        <ul class="navbar-nav mr-auto smooth-scroll">
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-offset="30">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#info" data-offset="100">Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#classes" data-offset="100">Classes</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials" data-offset="40">Reviews</a>
+          </li>
+  
+        </ul>
+        <div class="navbar-nav  smooth-scroll d-flex flex-row-reverse ">
+          <div class="nav-item">
+            <li id="signin"> <a type='btn ' class="btn btn-info btn-rounded glow " href="#Login-User" data-offset="10">
+                Sign in</a></li>
+            <li id="signout"> <a class="btn btn-info btn-rounded" href="index.php?logout">Sign
+                Out</a></li>
+          </div>
+          <li class="nav-item  " hidden id="dashboard">
+            <a class=" btn btn-outline-info btn-rounded  " href="pages/Dashboards/DashboardSection.php">Dashboard</a>
+          </li>
         </div>
-        <li class="nav-item  " hidden id="dashboard">
-          <a class=" btn btn-outline-info btn-rounded  " href="pages/Dashboards/DashboardSection.php">Dashboard</a>
-        </li>
+      </div>
+    </div>
+  </nav>
+  <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}'
+    style="background-image: url('img/landing.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="mask rgba-black-strong">
+      <div class="container h-100 d-flex justify-content-center align-items-center">
+        <div class="row smooth-scroll">
+          <div class="col-md-12 white-text text-center">
+            <div class="wow fadeInDown" data-wow-delay="0.2s">
+              <h2 class="display-3 font-weight-bold mb-2">StudyShack Institute</h2>
+              <hr class="hr-light">
+              <h3 class="subtext-header mt-4 mb-5">Empowering young minds to explore the world of technology.</h3>
+  
+              <div class="input-group input-group-lg">
+                <input id="live_search" autocomplete="off" type="search" class="form-control form-control-lg rounded "
+                  placeholder="Type Keywords" aria-label="Type Keywords" aria-describedby="basic-addon2" />
+                <span class="input-group-text border-0 bg-info" id="basic-addon2"><i class="fas fa-search "></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</nav>
+
+</div>
+
+<script type="">
+  $(document).ready(function () {
+    $("#live_search").keyup(function () {
+      var input = $(this).val();
+
+      if (input != "") {
+        $.ajax({
+          url: 'utils/search.php',
+          method: "POST",
+          data: { input: input },
+
+          success: function (data) {
+            $("#searchresult").html(data);
+            $("#searchresult").css("display", "block");
+            $("#post-placeholder").css("display", "none");
+            $("html, body").animate({scrollTop: 900});
+          }
+        });
+      } else {
+        $("#searchresult").css("display", "none");
+        $("#post-placeholder").css("display", "block");
+      }
+    });
+  });
+
+</script>

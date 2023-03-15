@@ -1,22 +1,22 @@
 <?php
 // fetch products from database with particular id 
-
-include "../utils/db_connect.php";
 session_start();
+include "../utils/db_connect.php";
+
 error_reporting(E_ALL);
 ini_set("display_errors", NULL);
 
-if ($_SESSION['login_user']) {
+// if ($_SESSION['login_user']) {
     if ($_SESSION['user_type'] != 'student') {
-        echo '<style>,#staffmember{display:block !important;}</style>';
+        echo '<style>   #staffmember{display:block !important;}</style>';
         echo '<style>#signBack ,#applyclass{display:none !important;}</style>';
     } else {
         echo '<style>#applyclass{display:block !important;}</style>';
         echo '<style>#signBack{display:none !important;}</style>';
     }
-}else{
-    echo '<style>#signBack{display:block !important;}</style>';
-}
+// } else {
+//     echo '<style>#signBack{display:block !important;}</style>';
+// }
 
 
 
@@ -30,7 +30,6 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
 }
 
 
-$data = "";
 if ($stmt_result->num_rows > 0) {
 
     $data = $stmt_result->fetch_assoc();
@@ -116,7 +115,7 @@ if ($stmt_result->num_rows > 0) {
                             </div>
                             <p id="staffmember" class="text-center strong pt-4"> <strong>Teachers And Staff Can Only view tha class<strong></p>
                             <div class="d-flex justify-content-end pt-3">
-                                <a type="button" id="applyclass" name="applyclass" class="btn btn-info btn-lg ms-2" data-mdb-toggle="modal" data-mdb-target="#exampleModal"  > Apply For Class</a>
+                                <a type="button" id="applyclass" name="applyclass" class="btn btn-info btn-lg ms-2" data-mdb-toggle="modal" data-mdb-target="#exampleModal"> Apply For Class</a>
                             </div>
                         </form>
                     </div>
@@ -127,10 +126,9 @@ if ($stmt_result->num_rows > 0) {
 
             <script>
                 var m_img = document.getElementById('ProductImg');
-                m_img.src = '<?php print_r($data["c_scr"]); ?> ';
+                m_img.src = '<?php print_r("../" . $data["c_scr"]); ?> ';
             </script>
 </body>
 <?php
 include "payment.php";
 ?>
-

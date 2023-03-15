@@ -1,9 +1,3 @@
-<?php
-session_start();
-
-
-?>
-
 <div class="col ">
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -59,7 +53,7 @@ session_start();
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cancel</button>
-                                    <input type="submit" class="btn btn-primary" name="makePayment"  />
+                                    <input type="submit" class="btn btn-primary" name="makePayment" />
                                 </div>
                             </form>
                         </div>

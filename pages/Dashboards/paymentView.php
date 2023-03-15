@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 <?php
-
+                    
                 // Attempt select query execution
                 $sql = "SELECT * FROM payment";
                 if ($result = mysqli_query($conn, $sql)) {

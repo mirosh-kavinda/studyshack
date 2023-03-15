@@ -8,7 +8,7 @@
       <div class="col-md-12 mb-2">
         <div class="form-outline">
           <input required type="text" id="class_name" name="c_name" class="form-control form-control-lg" />
-          <label class="form-label" for="class_name">Material Topik</label>
+          <label class="form-label" for="class_name">Material Topic</label>
         </div>
       </div>
 

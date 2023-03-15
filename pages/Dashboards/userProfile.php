@@ -3,6 +3,7 @@
 include "../../utils/db_connect.php";
 include "../../utils/functions.php";
 
+session_start();
 $usertype = $_SESSION['user_type'];
 if ($usertype) {
     $data = getUser($conn, $_SESSION['user_type'], $_SESSION['user_email']);
