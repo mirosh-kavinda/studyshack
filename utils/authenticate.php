@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // include database 
 include "db_connect.php";
@@ -19,6 +18,7 @@ if (isset($_POST["login"])) {
     if ($data['password'] === $password) {
       $_SESSION['login_user'] = $data['uname'];
       $_SESSION['user_email'] = $data['email'];
+      $_SESSION['userId']=$data['u_id'];
 
       $e_message = 'Hello ' . $_SESSION['login_user'] . '\nWelcome to StudyShack';
       $e_icon = 'success';

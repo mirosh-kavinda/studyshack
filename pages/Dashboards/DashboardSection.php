@@ -13,7 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
 </head>
 <?php
-session_start();
+include "../../utils/db_connect.php"
 ?>
 
 <body>

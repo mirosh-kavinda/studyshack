@@ -204,17 +204,15 @@
 
       <div class="pt-5 row ">
         <h2 class=" text-center col font-weight-bold">Popular Programmes </h2>
-        <a href="pages/all_classes.php" class=" col-3 btn btn-outline-info  btn-rounded" style="justify-content: end;">View
+        <a href="pages/all_classes.php" class="  btn btn-outline-info  btn-rounded" style="justify-content: center;">View
           More</a>
 
       </div>
 
       <!--Grid row-->
       <div class="row mb-5  pt-4 mt-4 pb-3">
-
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 wow fadeIn" data-wow-delay="0.4s">
-
           <!--Card Light-->
           <div class="card">
             <!--Card image-->

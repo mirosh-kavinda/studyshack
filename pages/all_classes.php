@@ -25,7 +25,6 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
             <?php
-            session_start();
             include "../utils/db_connect.php";
 
 
@@ -43,7 +42,7 @@
             ?>
                     <div class="col ">
                         <div class="card">
-                            <img src="<?php echo "../".$row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
+                            <img src="<?php echo "../" . $row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
                             <div class="card-body">
                                 <h5 class="card-title"> <?php echo $row['c_name']; ?></h5>
                                 <p class="card-text">
@@ -78,7 +77,7 @@
             ?>
                     <div class="col">
                         <div class="card">
-                            <img src="<?php echo "../".$row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
+                            <img src="<?php echo "../" . $row['c_scr']; ?>" class="card-img-top" height="200px" alt="Hollywood Sign on The Hill" />
                             <div class="card-body">
                                 <h5 class="card-title"> <?php echo $row['c_name']; ?></h5>
                                 <p class="card-text">
@@ -87,8 +86,6 @@
                                 <a href="classView.php?id=<?php echo $row['c_id']; ?>" class="black-text d-flex flex-row-reverse">View More</a>
                             </div>
                         </div>
-
-
                 <?php
 
                 }

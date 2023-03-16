@@ -52,7 +52,7 @@ if (isset($_POST['input'])) {
       <h5><strong>Try again with Recent serches</strong></h5>
       <ul style="border:10px solid black ;">
         <?php
-        $query = $con->prepare("SELECT * FROM products ORDER BY p_id ASC");
+        $query = $conn->prepare("SELECT * FROM class ORDER BY c_id ASC");
         $query->execute();
         $result = $query->get_result();
 
@@ -63,7 +63,7 @@ if (isset($_POST['input'])) {
         ?>
             <li>
               <hr>
-              <p><?php echo $row['p_name']; ?></p>
+              <p><?php echo $row['c_name']; ?></p>
             </li>
         <?php
           }

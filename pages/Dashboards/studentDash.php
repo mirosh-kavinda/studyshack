@@ -45,12 +45,11 @@
         <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel" aria-labelledby="v-tabs-home-tab">
           <div id="tab1"></div>
         </div>
-      </div>
-      <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
-        <div id="tab2"></div>
-      </div>
-      <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel" aria-labelledby="v-tabs-messages-tab">
-        <div id="tab3">
+        <div class="tab-pane fade" id="v-tabs-profile" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+          <div id="tab2"></div>
+        </div>
+        <div class="tab-pane fade" id="v-tabs-messages" role="tabpanel" aria-labelledby="v-tabs-messages-tab">
+          <div id="tab3"> </div>
         </div>
       </div>
       <!-- Tab content -->
