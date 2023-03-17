@@ -19,6 +19,9 @@
             <a class="nav-link" id="ex2-tab-3" data-mdb-toggle="tab" href="#v-tabs-messages" role="tab" aria-controls="ex2-tabs-3" aria-selected="false">Add Materials</a>
           </li>
           <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex2-tab-3" data-mdb-toggle="tab" href="#v-tabs5" role="tab" aria-controls="ex2-tabs-5" aria-selected="false">Add Marks</a>
+          </li>
+          <li class="nav-item" role="presentation">
             <a class="nav-link" id="ex2-tab-4" data-mdb-toggle="tab" href="#v-tabs4" role="tab" aria-controls="ex2-tabs-4" aria-selected="false">Profile</a>
           </li>
         </ul>
@@ -46,6 +49,9 @@
           $(function() {
             $("#tab4").load("userProfile.php");
           });
+          $(function() {
+            $("#tab5").load("addMark.php");
+          });
         </script>
 
 
@@ -60,6 +66,9 @@
         </div>
         <div class="tab-pane fade" id="v-tabs4" role="tabpanel" aria-labelledby="v-tabs-tabs4">
           <div id="tab4"></div>
+        </div>
+        <div class="tab-pane fade" id="v-tabs5" role="tabpanel" aria-labelledby="v-tabs-tabs4">
+          <div id="tab5"></div>
         </div>
         <!-- Tab content -->
       </div>
