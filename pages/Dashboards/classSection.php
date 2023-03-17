@@ -42,8 +42,8 @@
                             echo "<td>" . $row['c_category'] . "</td>";
                             echo "<td>";
 
-                            echo '<a href="update.php?id=' . $row['c_id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                            echo '<a href="delete.php?id=' . $row['c_id'] . '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+
+                            echo '<a href="../../utils/delete.php?id=' . $row['c_id'] . '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                             echo "</td>";
                             echo "</tr>";
                         }

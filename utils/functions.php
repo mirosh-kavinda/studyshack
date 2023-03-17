@@ -80,8 +80,7 @@ function CreateOverviewTable($usertype, $conn)
 				echo "<td>" . $row['tele'] . "</td>";
 				echo "<td>" . $row['whatsapp'] . "</td>";
 				echo "<td>";
-				echo '<a href="update.php?id=' . $row['u_id'] . '" class="mr-3 p-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-				echo '<a href="delete.php?id=' . $row['u_id'] . '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+				echo '<a href="../../utils/delete.php?id=' . $row['u_id'] . '&userType=' . $usertype . ' " title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
 				echo "</td>";
 				echo "</tr>";
 			}

@@ -11,22 +11,6 @@ if ($usertype) {
     echo "error";
 }
 
-// update code 
-if (isset($_POST['editProfile'])) {
-    $EdName = $_POST['name'];
-    $Eemail = $_POST['email'];
-    $Ephone = $_POST['phone'];
-    $Emobile = $_POST['tele'];
-    $Eaddress = $_POST['address'];
-
-
-
-    $sql = "UPDATE $usertype  SET uname=?, address=?,tele=?,email=?,whatsapp=?  WHERE u_id=? ";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssss", $EName, $Eemail, $Ephone, $Emobile, $Eaddress,  $data['u_id']);
-    $stmt->execute();
-}
 
 ?>
 
@@ -45,7 +29,7 @@ if (isset($_POST['editProfile'])) {
     <div class="col-lg-8">
         <div class="card mb-4">
             <div class="card-body">
-                <form action="" method="post">
+                <form action="../../utils/update.php" method="post">
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Full Name</p>

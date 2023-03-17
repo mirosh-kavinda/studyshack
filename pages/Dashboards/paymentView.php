@@ -25,7 +25,7 @@ if ($result = mysqli_query($conn, $sql)) {
             echo "<td>" . $row['p_date'] . "</td>";
             echo "<td>" . $row['class_id'] . "</td>";
             echo "<td>";
-            echo '<a href="update.php?id=' . $row['s_email'] . '" class="mr-3 p-3" title="Update Record" data-toggle="tooltip"><span class="fa-solid fa-check"></span></a>';
+            echo '<a href="update.php?id=' . $row['s_email'] . '" class="mr-3 p-3 btn btn-info" title="Update Record" data-toggle="tooltip"><span class="fa-solid fa-check"></span> Add to class</a>';
             echo "</td>";
             echo "</tr>";
         }
