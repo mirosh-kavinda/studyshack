@@ -83,7 +83,7 @@
                                 <p class="card-text">
                                     <?php echo $row['c_desc']; ?>
                                 </p>
-                                <a href="classView.php?id=<?php echo $row['c_id']; ?>" class="black-text d-flex flex-row-reverse">View More</a>
+                                <a href="programView.php?id=<?php echo $row['c_id']; ?>" class="black-text d-flex flex-row-reverse">View More</a>
                             </div>
                         </div>
                 <?php

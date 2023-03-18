@@ -3,11 +3,9 @@ include("../../utils/db_connect.php");
 include("../../utils/functions.php");
 
 
-
-
-
 switch ($_SESSION['user_type']) {
   case 'student':
+
     echo '<style>#signout{display:none !important;}</style>';
     $sql = "SELECT m_category FROM study_material  WHERE m_grade=? ";
     $data = getUser($conn, $_SESSION['user_type'], $_SESSION['user_email']);
@@ -42,20 +40,17 @@ switch ($_SESSION['user_type']) {
                     $stmt_result = $stmt->get_result();
                     if ($stmt_result->num_rows > 0) {
                       while ($row1 = $stmt_result->fetch_assoc()) {
-                        $filedir = "uploads/" . $row1['filename'];
+                        $filedir = "../../uploads/" . $row1['filename'];
                         $mid = $row1['m_id'];
                     ?>
                         <div class="row">
                           <div class="card-body">
                             <p class="card-text col"> <?php echo $row1["m_topic"]; ?></p>
                             <a href="<?php echo $filedir ?>" class="btn btn-info col-1 ">Download <i class="fas fa-download"></i></a>&nbsp&nbsp&nbsp
-                            <a href=" <?php echo '../../utils/delete.php?mid=' . $mid . '&directory=' . $filedir ?>" data-toggle="tooltip" title="Delete Record"><span class="fa fa-trash"></span></a>
                           </div>
 
                         <?php } ?>
                         </div>
-
-
                   <?php
                     }
                   }

@@ -1,3 +1,7 @@
+
+
+
+<h4 class="mb-5 p-3 text-uppercase">Welcome Admin :  <?php echo $_SESSION['login_user'] ?> !</h4>
 <div class="card ">
   <div class="container  mb-5 ">
     <div class="row">
@@ -33,7 +37,7 @@
       });
 
       $(function() {
-        $("#tab2").load("classSection.php");
+        $("#tab2").load("classView.php");
       });
 
       $(function() {
@@ -43,7 +47,7 @@
         $("#tab4").load("teacherView.php");
       });
       $(function() {
-        $("#tab5").load("paymentView.php");
+        $("#tab5").load("studentView.php");
       });
     </script>
 

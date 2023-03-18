@@ -21,7 +21,7 @@ include "../../utils/functions.php";
 </div>
 
 
-<form action="../../index.php" method="post" class="mb-5 ">
+<form action="../../index.php" method="post" class="mb-5 " enctype="multipart/form-data">
     <div class="col-md-12 mb-2">
         <div class="form-outline">
             <input required type="text" id="form3Example1m" name="tname" class="form-control form-control-lg" />
@@ -103,7 +103,15 @@ include "../../utils/functions.php";
                 </tr>
             </table>
             </select>
-
+            <div class="row" id="insert_img" style="display:none">
+                <div class="col-sm-3">
+                    <p class="mb-0">Add Profile Image : </p>
+                </div>
+                <div class="col-sm-9">
+                    <label for="pdfFile">Select img File with minimum 4mb:</label>
+                    <input type="file" name="pdfFile" class="form-control-file" id="pdfFile">
+                </div>
+            </div>
         </div>
 
 

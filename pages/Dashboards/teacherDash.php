@@ -1,8 +1,6 @@
-
-
 <div class="card ">
 
-  <h4 class="mb-5 p-3 text-uppercase">Welcome Teacher !</h4>
+  <h4 class="mb-5 p-3 text-uppercase">Welcome Teacher :  <?php echo $_SESSION['login_user'] ?> !</h4>
 
   <div class="container px-1">
     <div class="row">
@@ -41,7 +39,7 @@
           });
 
           $(function() {
-            $("#tab2").load("materialSection.php");
+            $("#tab2").load("materialView.php");
           });
           $(function() {
             $("#tab3").load("addMaterial.php");
@@ -50,7 +48,7 @@
             $("#tab4").load("userProfile.php");
           });
           $(function() {
-            $("#tab5").load("addMark.php");
+            $("#tab5").load("addMarkView.php");
           });
         </script>
 

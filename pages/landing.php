@@ -204,7 +204,7 @@
 
       <div class="pt-5 row ">
         <h2 class=" text-center col font-weight-bold">Popular Programmes </h2>
-        <a href="pages/all_classes.php" class="  btn btn-outline-info  btn-rounded" style="justify-content: center;">View
+        <a href="pages/allProgrammes.php" class="  btn btn-outline-info  btn-rounded" style="justify-content: center;">View
           More</a>
 
       </div>
@@ -237,7 +237,7 @@
                 card's
                 content.
               </p>
-              <a href="pages/classView.php?id=1" class="black-text d-flex flex-row-reverse">
+              <a href="pages/programView.php?id=1" class="black-text d-flex flex-row-reverse">
                 <p class="waves-effect p-2 font-small blue-text mb-0">View More
                   <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
                 </p>
@@ -277,7 +277,7 @@
                 card's
                 content.
               </p>
-              <a href="pages/classView.php?id=2" class="black-text d-flex flex-row-reverse">
+              <a href="pages/programView.php?id=2" class="black-text d-flex flex-row-reverse">
                 <p class="waves-effect p-2 font-small blue-text mb-0">View More
                   <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
                 </p>
@@ -318,7 +318,7 @@
                 card's
                 content.
               </p>
-              <a href="pages/classView.php?id=3" class="black-text d-flex flex-row-reverse">
+              <a href="pages/programView.php?id=3" class="black-text d-flex flex-row-reverse">
                 <p class="waves-effect p-2 font-small blue-text mb-0">View More
                   <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
                 </p>
@@ -357,7 +357,7 @@
                 card's
                 content.
               </p>
-              <a href="pages/classView.php?id=4" class="black-text d-flex flex-row-reverse">
+              <a href="pages/programView.php?id=4" class="black-text d-flex flex-row-reverse">
                 <p class="waves-effect p-2 font-small blue-text mb-0">View More
                   <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i>
                 </p>

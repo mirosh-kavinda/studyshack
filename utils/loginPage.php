@@ -39,7 +39,7 @@
         <input type="submit" class="btn btn-info btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" name="login" value="Login" />
 
         <p class="small fw-bold mt-2 pt-1 mb-0">For Students If you Don't have an account?
-          <a href="pages/Register/studReg.php" class="link-danger">Register</a>
+          <a href="pages/studReg.php" class="link-danger">Register</a>
         </p>
       </div>
 

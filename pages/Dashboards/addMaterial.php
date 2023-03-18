@@ -1,24 +1,16 @@
 <div class="card-body  text-black">
   <h3 class="text-uppercase">Add Materials </h3>
 
-  <form action="addingmat.php" method="post" enctype="multipart/form-data">
-
-
-    <div class="col-md-12 mb-2">
+  <form action="../../utils/teacherFeature.php" method="post" enctype="multipart/form-data">
+    <div class="col-md-4 mb-2">
       <div class="col-md-12 mb-2">
-        <div class="form-outline">
-          <input required type="text" id="class_name" name="m_name" class="form-control form-control-lg" />
-          <label class="form-label" for="class_name">Material Topic</label>
-        </div>
+        <label class="form-label" for="class_name">Material Topic</label>
+        <input required type="text" id="class_name" name="m_name" class="form-control form-control-lg" />
       </div>
-
-      <div class="col-md-12 mb-2">
-        <div class="form-outline">
-          <input required type="text" id="clas_description" name="m_category" class="form-control form-control-lg" />
-          <label class="form-label" for="clas_description">Material Category</label>
-        </div>
+      <div class="col-md-4 mb-2">
+        <label class="form-label" for="clas_description">Material Category</label>
+        <input required type="text" id="clas_description" name="m_category" class="form-control form-control-lg" />
       </div>
-
     </div>
     <div class="col-md-6 mb-4">
       <h6 class="mb-0 me-2">Grade :
@@ -41,20 +33,16 @@
       </h6>
     </div>
     <div>
-
       <div class="form-group">
-        <label for="pdfFile">Select PDF File with minimum 4mb:</label>
+        <label for="pdfFile">Select Material File with minimum 4mb:</label>
         <input type="file" name="pdfFile" class="form-control-file" id="pdfFile">
       </div>
-
-
 
     </div>
     <div class="d-flex justify-content-end pt-3">
       <button type="reset" class="btn btn-light btn-lg">Reset all</button>
-      <input required type="submit" name="submit" class="btn btn-info btn-lg ms-2" value="Add Material" />
+      <input type="submit" name="addMaterial" class="btn btn-info btn-lg ms-2" />
     </div>
   </form>
 
 </div>
-

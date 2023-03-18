@@ -31,7 +31,7 @@
     </div>
     <!-- /.Breadcrumbs & Search -->
 
-    <form action="../../index.php" method="post" class="mb-5 mt-5">
+    <form action="../index.php" method="post" class="mb-5 mt-5" enctype="multipart/form-data">
 
         <div class="col-md-12 mb-2">
 
@@ -117,7 +117,15 @@
                 </select>
             </h6>
         </div>
-
+        <div class="row" id="insert_img"    >
+            <div class="col-sm-3">
+                <p class="mb-0">Add Profile Image : </p>
+            </div>
+            <div class="col-sm-9">
+                <label for="pdfFile">Select img File with minimum 4mb:</label>
+                <input type="file" name="pdfFile" class="form-control-file" id="pdfFile">
+            </div>
+        </div>
         <div class="d-flex justify-content-end pt-3">
             <button type="reset" class="btn btn-light btn-lg">Reset</button>
             <input type="submit" name="sregister" class="btn btn-info btn-lg ms-3" value="Submit" />

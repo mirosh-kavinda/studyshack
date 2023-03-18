@@ -1,21 +1,5 @@
 <?php
 
-// php code using for load web content without refreshing the webpage 
-if (
-  isset($_SERVER['HTTPS']) &&
-  ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
-  isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
-  $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'
-) {
-  $ssl = 'https';
-} else {
-  $ssl = 'http';
-}
-$app_url = ($ssl)
-  . "://" . $_SERVER['HTTP_HOST']
-  . (dirname($_SERVER["SCRIPT_NAME"]) == DIRECTORY_SEPARATOR ? "" : "/")
-  . trim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
-
 include 'utils/authenticate.php';
 // this for hide undeclared error
 error_reporting(E_ALL);
@@ -30,9 +14,10 @@ if ($_SESSION["login_user"]) {
   echo '<style>#signin,#Login-User{display:block !important;}</style>';
 }
 
+
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
+
 
 <head>
   <meta charset="utf-8">
@@ -55,7 +40,6 @@ if ($_SESSION["login_user"]) {
 
   <!-- this use for use sweet alert in our website -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
-
 </head>
 
 
