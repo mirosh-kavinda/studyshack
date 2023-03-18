@@ -1,11 +1,15 @@
 # Study Shack 
-    This is a minimulistic Tutoring web application.
-    This contains three user levels , such that Admin , Teachers, and Students . 
+    This is a minimulistic Tutoring web application which  contains three user levels , such that Admin , Teachers, and Students . 
     
 
-#Links
-Git Hub Link : https://github.com/mirosh-kavinda/IT_Academy.git 
-Published Link : https://studyshack.herokuapp.com/	
+
+    
+    
+    
+
+#Links <br>
+Git Hub Link : https://github.com/mirosh-kavinda/IT_Academy.git  <br>
+Published Link : https://studyshack.herokuapp.com/	 <br>
 
 
 
