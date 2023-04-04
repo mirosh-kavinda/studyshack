@@ -3,7 +3,7 @@
     
 
 #Links <br>
-Git Hub Link : https://github.com/mirosh-kavinda/IT_Academy.git  <br>
+Git Hub Link : https://github.com/mirosh-kavinda/studyshack.git  <br>
 Published Link : https://studyshack.herokuapp.com/	 <br>
 
 ## To run website you need to follow below mentioned steps
