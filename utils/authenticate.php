@@ -149,6 +149,10 @@ else if (isset($_GET["logout"])) {
     $e_text =  'Until the next time ! ';
     unset($_SESSION["login_user"]);
     unset($_SESSION['user_email']);
+    unset($_SESSION['userId'] );
+    unset($_SESSION['user_img']);
+    unset($_SESSION['userId']);
+    
     session_destroy();
     // header("location:index.php");
   }

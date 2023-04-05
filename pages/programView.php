@@ -26,6 +26,7 @@ if (isset($_POST['makePayement'])) {
         $sid = $_SESSION['userId'];
 
 
+
         $sql = "INSERT INTO payment(s_email,p_fee,p_date,c_name,s_id) VALUES('$email','$c_fee','$date','$c_id','$sid')";
         if (mysqli_query($conn, $sql)) {
             $e_message = 'Payment Passed Succesfully!';

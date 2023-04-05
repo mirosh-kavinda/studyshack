@@ -34,7 +34,7 @@ if (isset($_POST['addMaterial'])) {
             $filename = $_FILES["pdfFile"]["name"];
             $folder_path = $targetDir;
             $time_stamp = date('Y-m-d H:i:s');
-            $sql = "INSERT INTO study_material (filename, folder_path, time_stamp, m_grade,m_category,m_topic) VALUES ('$filename','$folder_path', '$time_stamp','$grade','$cat','$name') ";
+            $sql = "INSERT INTO study_material (filename,m_link, m_grade,m_category,m_topic) VALUES ('$filename','$folder_path','$grade','$cat','$name') ";
 
             if ($conn->query($sql) === TRUE) {
                 echo "File uploaded successfully";

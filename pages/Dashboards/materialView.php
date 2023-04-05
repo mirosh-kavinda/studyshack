@@ -26,6 +26,7 @@ switch ($_SESSION['user_type']) {
             if ($stmt_result->num_rows > 0) {
               while ($row = $stmt_result->fetch_assoc()) {
                 $category = $row['m_category'];
+                $grade=$data['grade'];
             ?>
                 <div class="card">
                   <div class="card-body">
@@ -73,7 +74,7 @@ switch ($_SESSION['user_type']) {
 
                 if ($stmt_result->num_rows > 0) {
                   while ($row = $stmt_result->fetch_assoc()) {
-                    $filedir = "uploads/" . $row['filename'];
+                    $filedir = "../../uploads/" . $row['filename'];
                     $mid = $row['m_id'];
                 ?>
                     <table class="table table-hover table-striped col-md-12">
