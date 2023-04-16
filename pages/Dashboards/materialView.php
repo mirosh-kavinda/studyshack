@@ -30,6 +30,8 @@ switch ($_SESSION['user_type']) {
             ?>
                 <div class="card">
                   <div class="card-body">
+                    <table>
+                      
                     <h5 class="card-title"><?php echo $row["m_category"] ?></h5>
 
 
@@ -44,14 +46,15 @@ switch ($_SESSION['user_type']) {
                         $filedir = "../../uploads/" . $row1['filename'];
                         $mid = $row1['m_id'];
                     ?>
-                        <div class="row">
+                    
                           <div class="card-body">
+                          <div class="row">
                             <p class="card-text col"> <?php echo $row1["m_topic"]; ?></p>
-                            <a href="<?php echo $filedir ?>" class="btn btn-info col-1 ">Download <i class="fas fa-download"></i></a>&nbsp&nbsp&nbsp
+                            <a href="<?php echo $filedir ?>" class="btn btn-info col-1 "> <i class="fas fa-download"></i></a>&nbsp&nbsp&nbsp
                           </div>
-
+                          </div>
                         <?php } ?>
-                        </div>
+                    
                   <?php
                     }
                   }
